@@ -7,11 +7,13 @@ public class Student {
 	}
 
 	private final String firstName;
+	private final String surname;
 	private final int age;
 	private final String major;
 
 	public Student(String firstName, String surname, int age, String major) {
 		this.firstName = firstName;
+		this.surname = surname;
 		this.age = age;
 		this.major = major;
 	}
@@ -26,5 +28,9 @@ public class Student {
 
 	public int getAge() {
 		return age;
+	}
+
+	public String getSurname() {
+		return surname;
 	}
 }

@@ -50,7 +50,7 @@ public class StudentsTests {
 	}
 
 	@Test
-	public void reducesStudentMajors(){
+	public void reducesStudentFirstNames(){
 		String nameList = fn(students)
 				.map(student -> student.getFirstName())
 				.reduce("", (list, firstName) -> list + firstName + ", ");
