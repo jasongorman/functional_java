@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Functional<T> {
 
-	private List<T> items;
+	private final List<T> items;
 	
 	public Functional(List<T> items){
 		this.items = items;
