@@ -1,0 +1,1 @@
+A lot of new Java developers (and, let's be honest, some not so new) get confused about how functional programming works in Java, and also about generics. This little project is designed for workshops to help them wrap their heads around both, by illustrating how filter, map and reduce could be implemented in Java.
