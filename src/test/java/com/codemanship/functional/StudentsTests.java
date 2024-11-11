@@ -49,4 +49,13 @@ public class StudentsTests {
 		assertEquals(79, ageSum);
 	}
 
+	@Test
+	public void reducesStudentMajors(){
+		String nameList = fn(students)
+				.map(student -> student.getFirstName())
+				.reduce("", (list, firstName) -> list + firstName + ", ");
+
+		assertEquals("Michael, Jill, Casey, Lucy, ", nameList);
+	}
+
 }

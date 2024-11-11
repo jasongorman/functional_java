@@ -37,7 +37,7 @@ public class Functional<T> {
 	public T reduce(T initialValue, ReducingFunction<T> reducingFunction) {
 		T subtotal = initialValue;
 		for (T item : items) {
-			subtotal = reducingFunction.apply(item, subtotal);
+			subtotal = reducingFunction.apply(subtotal, item);
 		}
 		return subtotal;
 	}
