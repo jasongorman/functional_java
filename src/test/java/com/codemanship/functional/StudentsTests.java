@@ -45,8 +45,8 @@ public class StudentsTests {
 	public void reducesStudentAge() {
 		double ageSum = fn(students)
 				.map(student -> student.getAge())
-				.reduce(0d,(sum, age) -> sum + age);
-		assertEquals(79, ageSum, 0);
+				.reduce(0,(sum, age) -> sum + age);
+		assertEquals(79, ageSum);
 	}
 
 }

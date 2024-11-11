@@ -2,10 +2,10 @@ package com.codemanship.functional;
 
 public class Student {
 
-	private double age;
-	private String major;
+	private final int age;
+	private final String major;
 
-	public Student(String firstName, String surname, double age, String major) {
+	public Student(String firstName, String surname, int age, String major) {
 		this.age = age;
 		this.major = major;
 	}
@@ -18,8 +18,7 @@ public class Student {
 		return age >= 21;
 	}
 
-	public double getAge() {
-		// TODO Auto-generated method stub
+	public int getAge() {
 		return age;
 	}
 }
