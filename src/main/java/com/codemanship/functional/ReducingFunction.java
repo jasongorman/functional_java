@@ -1,5 +1,5 @@
 package com.codemanship.functional;
 
-public interface Accumulator<T> {
+public interface ReducingFunction<T> {
 	T apply(T input, T accumulator);
 }

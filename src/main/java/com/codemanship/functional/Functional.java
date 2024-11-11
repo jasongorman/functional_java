@@ -12,10 +12,10 @@ public class Functional<T> {
 		this.items = items;
 	}
 
-	public Functional<T> filter(Question<T> question) {
+	public Functional<T> filter(FilteringFunction<T> question) {
 		List<T> results = new ArrayList<>();
 		for (T item : items) {
-			if(question.test(item)){
+			if(question.apply(item)){
 				results.add(item);
 			}
 		}
@@ -34,10 +34,10 @@ public class Functional<T> {
 		return new Functional<R>(results);
 	}
 
-	public <R, V> T reduce(T initialValue, Accumulator<T> accumulator) {
+	public <R, V> T reduce(T initialValue, ReducingFunction<T> reducingFunction) {
 		T subtotal = initialValue;
 		for (T item : items) {
-			subtotal = accumulator.apply(item, subtotal);
+			subtotal = reducingFunction.apply(item, subtotal);
 		}
 		return subtotal;
 	}
