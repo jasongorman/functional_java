@@ -19,7 +19,7 @@ public class Functional<T> {
 				results.add(item);
 			}
 		}
-		return new Functional<T>(results);
+		return new Functional<>(results);
 	}
 
 	public List<T> asList() {
@@ -31,10 +31,10 @@ public class Functional<T> {
 		for (T item : items) {
 			results.add(function.apply(item));
 		}
-		return new Functional<R>(results);
+		return new Functional<>(results);
 	}
 
-	public <R, V> T reduce(T initialValue, ReducingFunction<T> reducingFunction) {
+	public T reduce(T initialValue, ReducingFunction<T> reducingFunction) {
 		T subtotal = initialValue;
 		for (T item : items) {
 			subtotal = reducingFunction.apply(item, subtotal);
